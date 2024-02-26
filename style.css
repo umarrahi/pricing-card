@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+    --white: #fff;
+    /* --bg-color: #F4F2FD; */
+    --bg-color: #e5fff2;
+    --card-bg: #FEFEFE;
+    --sec-card-bg: #2a2a2a;
+    --green: #00D26A;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--bg-color);
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    overflow: auto;
+}
+
+.pricing-plan {
+    padding: 40px 50px;
+    background-color: var(--card-bg);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 12px;
+    color: var(--sec-card-bg);
+}
+
+.plan-title {
+    font-size: 25px;
+    font-family: "Anton", sans-serif;
+}
+
+.plan-price {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 0px;
+}
+
+.plan-features {
+    padding: 50px 0px;
+}
+
+.plan-features li {
+    list-style-type: none;
+    font-size: 15px;
+}
+
+.plan-features li .fa-circle-check {
+    color: var(--green);
+    padding-right: 5px;
+    font-size: 15px;
+}
+
+.plan-features li .fa-circle-xmark {
+    color: var(--sec-card-bg);
+    padding-right: 5px;
+    font-size: 15px;
+}
+
+.plan-button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 50px;
+    background-color: var(--green);
+    border: none;
+    color: var(--card-bg);
+    cursor: pointer;
+    font-weight: 600;
+    font-family: "DM Sans", sans-serif;
+}
+
+.standard-plan {
+    background-color: var(--green);
+    color: var(--card-bg);
+}
+
+.standard-features li .standard-icon {
+    color: var(--card-bg);
+}
+
+.standard-btn {
+    background-color: var(--card-bg);
+    color: var(--green);
+}
+
+
+/* ===== Media Query ====== */
+
+/* Hint: What can you do with a media query and flexbox? */
+
+@media screen and  (min-width: 320px) and (max-width: 426px) {
+    .pricing-container{
+        flex-direction: column;
+        height: 200vh;
+    }
+
+}
+
+@media (max-width: 768px){
+    .pricing-container{
+        flex-wrap: wrap;
+    }
+}
+
+@media  (max-width: 1024px) {
+    .pricing-container{
+        margin: 10px;
+    }
+}
+
